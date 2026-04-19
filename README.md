@@ -255,3 +255,7 @@ git tag -a <tagname> -m "Your message here"
 git push origin --tags
 git push origin <tagname>
 ```
+
+## Git upstream image
+
+<img src="https://raw.githubusercontent.com/atomjoy/git-upstream/refs/heads/main/git-upstream.png" width="100%">
