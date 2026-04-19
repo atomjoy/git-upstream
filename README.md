@@ -109,8 +109,8 @@ Kilka istotnych poleceń git.
 ```sh
 # Check origins list
 git remote -v
-# Add upstream to repo
-git remote add upstream https://github.com/company/repo-name.git
+# Add upstream to repo (or with https)
+git remote add upstream git@github.com:company/repo-name.git
 # Pull code from upstream to main branch
 git pull upstream main
 # Or with rebase not merge
