@@ -138,6 +138,94 @@
             margin-top: 30px;
             }
         }
+
+        .arr-top {
+            position: relative;
+            display: inline-block;
+            width: 4px;
+            height: 100px;
+            margin: 0 29px;
+            border-radius: 9999px;
+            background-color: #000000;
+        }
+
+        .arr-top::before,
+        .arr-top::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: calc(50% - 2px);
+            width: 4px;
+            height: 45px;
+            border-radius: 9999px;
+            background-color: #000000;
+            transform-origin: 50% 2px;
+        }
+
+        .arr-top::before {
+            transform: rotate(45deg);
+        }
+
+        .arr-top::after {
+            transform: rotate(-45deg);
+        }
+
+        .arr-bot {
+            position: relative;
+            display: inline-block;
+            width: 4px;
+            height: 100px;
+            margin: 0 29px;
+            border-radius: 9999px;
+            background-color: #000000;
+        }
+
+        .arr-bot::before,
+        .arr-bot::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: calc(50% - 2px);
+            width: 4px;
+            height: 45px;
+            border-radius: 9999px;
+            background-color: #000000;
+            transform-origin: 50% calc(100% - 2px);
+        }
+
+        .arr-bot::before {
+            transform: rotate(45deg);
+        }
+
+        .arr-bot::after {
+            transform: rotate(-45deg);
+        }
+
+        .github-arrows {
+            float: left;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        .arrow-top,
+        .arrow-bot {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .arr-txt {
+            margin-block: 10px;
+            font-size: 20px;
+            font-weight: 700;
+            padding: 20px;
+            margin-left: -20px;
+            color: #fff;
+            background: #003F34;
+            border-radius: 20px;
+        }
     </style>
 </head>
 <body>
@@ -178,6 +266,17 @@
                 <div class="branch-name">my-new-feature</div>
                 <div class="branch-name">hotfix/bug123</div>
             </div>
+        </div>
+    </div>
+
+    <div class="github-arrows">
+        <div class="arrow-top">
+            <div class="arr-top"></div>
+            <div class="arr-txt">git push</div>
+        </div>
+        <div class="arrow-bot">
+            <div class="arr-txt">git pull</div>
+            <div class="arr-bot"></div>
         </div>
     </div>
 
