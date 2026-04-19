@@ -130,15 +130,6 @@ git branch -r
 git checkout main
 ```
 
-### Usuwanie lokalnych gałęzi (z dysku)
-
-```sh
-# Delete from local
-git branch -d my-new-feature
-# Force delete from local
-git branch -D my-new-feature
-```
-
 ### Dodawanie gałęzi
 
 ```sh
@@ -150,6 +141,15 @@ git checkout -b fix/bug1/func1
 git checkout -b fix/bug1/func2
 # Create branch bug3 from bug1
 git checkout -b fix/bug3 fix/bug1/func1
+```
+
+### Usuwanie lokalnych gałęzi (z dysku)
+
+```sh
+# Delete from local
+git branch -d my-new-feature
+# Force delete from local
+git branch -D my-new-feature
 ```
 
 ### Usuwanie zdalnych gałęzi (z githuba)
