@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Github</title>
+
+    <style>
+        * {
+            color: #003F34;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            padding-inline: 30px;
+        }
+
+        .company {
+            float: left;
+            width: 100%;
+            text-align: center;
+            font-size: 30px;
+            font-weight: 700;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 20px;
+            background: #fff;
+            border-bottom: 4px solid #01B93E;
+            box-shadow: 0px 1px 3px #0001;
+        }
+
+        .github-wrapper {
+            float: left;
+            width: 100%;
+            padding: 30px;
+            margin-block: 150px;
+            border-radius: 20px;
+            background: #F3F4F4;
+            border: 1px solid #dde0de;
+        }
+
+        .github {
+            float: left;
+            width: 100%;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 200px;
+        }
+
+        .github-local {
+            margin-top: 200px;
+        }
+
+        .repo {
+            float: left;
+            width: 100%;
+            padding: 20px;
+            border-radius: 20px;
+            background: #01CD45;
+            background: #01B93E;
+        }
+
+        .repo .name {
+            font-size: 25px;
+            font-weight: 700;
+            background: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        .repo .username {
+            text-align: center;
+            font-size: 20px;
+            font-weight: 600;
+            background: #f1f1f1;
+            padding: 13px 20px;
+            margin-top: 10px;
+        }
+
+        .repo .stream-name {
+            font-size: 20px;
+            font-weight: 600;
+            color: #fff;
+            background: #003F34;
+            padding: 15px 20px;
+            margin-bottom: 10px;
+            float: left;
+            width: 100%;
+        }
+
+        .repo .branch-name {
+            font-size: 20px;
+            font-weight: 600;
+            color: #000;
+            background: #fff;
+            padding: 15px 20px;
+            margin-top: 5px;
+        }
+
+        .repo .title {
+            color: #fff;
+            font-weight: 600;
+            margin-top: 10px;
+            padding-block: 10px;
+            text-transform: uppercase;
+        }
+
+        .repo * {
+            border-radius: 10px;
+        }
+
+        .local-stream {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="github-wrapper">
+        <div class="company">
+            Github
+        </div>
+        <div class="github">
+            <div class="repo">
+                <div class="name">Team Fork</div>
+                <div class="username">@teamone/repo.git</div>
+                <div class="title">Stream name:</div>
+                <div class="stream-name">teamone</div>
+                <div class="title">Branches:</div>
+                <div class="branch-name">main</div>
+                <div class="branch-name">hotfix/bug321</div>
+                <div class="branch-name">features/urgent/2fa</div>
+            </div>
+
+            <div class="repo">
+                <div class="name">Company Original</div>
+                <div class="username">@company/repo.git</div>
+                <div class="title">Stream name:</div>
+                <div class="stream-name">upstream</div>
+                <div class="title">Branches:</div>
+                <div class="branch-name">main</div>
+                <div class="branch-name">hotfix</div>
+                <div class="branch-name">features</div>
+            </div>
+
+            <div class="repo">
+                <div class="name">Your Fork</div>
+                <div class="username">@username/repo.git</div>
+                <div class="title">Stream name:</div>
+                <div class="stream-name">origin</div>
+                <div class="title">Branches:</div>
+                <div class="branch-name">main</div>
+                <div class="branch-name">my-new-feature</div>
+                <div class="branch-name">hotfix/bug123</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="github-wrapper">
+        <div class="company">
+            Local Computer Disk
+        </div>
+        <div class="github">
+            <div class="repo">
+                <div class="name">Your Fork Clone</div>
+                <div class="username">@username/repo.git</div>
+                <div class="title">Remote stream name:</div>
+                <div class="local-stream">
+                    <div class="stream-name" >teamone</div>
+                    <div class="stream-name" >upstream</div>
+                    <div class="stream-name" >origin</div>
+                </div>
+                <div class="title">Remote branches:</div>
+                <div class="branch-name">teamone/main, teamone/hotfix/bug321, teamone/features/urgent/2fa</div>
+                <div class="branch-name">upstream/main, upstream/hotfix, upstream/features</div>
+                <div class="branch-name">origin/main, origin/my-new-feature, origin/hotfix/bug123</div>
+                <div class="title">Local branches:</div>
+                <div class="branch-name">main</div>
+                <div class="branch-name">fix/bug/21</div>
+                <div class="branch-name">urgent/login/2fa</div>
+                <div class="branch-name">my-new-feature</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
