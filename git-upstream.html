@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Git Github</title>
 
+   	<!-- Css, links -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <style>
         * {
             color: #003F34;
@@ -35,7 +39,7 @@
             width: 100%;
             min-width: 100%;
             padding: 30px;
-            margin-block: 150px;
+            margin-block: 50px;
             border-radius: 20px;
             background: #F3F4F4;
             border: 1px solid #dde0de;
@@ -47,7 +51,11 @@
             border-radius: 20px;
             display: flex;
             align-items: center;
-            gap: 200px;
+            gap: 30px;
+        }
+
+        .github-upstream {
+            margin-bottom: 0px;
         }
 
         .github-local {
@@ -129,76 +137,14 @@
         }
 
         @media all and (max-width: 1024px) {
-            .github {
+            .github, .local-stream {
                 float: left;
                 width: 100%;
                 display: block;
             }
             .github .repo {
-            margin-top: 30px;
+                margin-top: 30px;
             }
-        }
-
-        .arr-top {
-            position: relative;
-            display: inline-block;
-            width: 4px;
-            height: 100px;
-            margin: 0 29px;
-            border-radius: 9999px;
-            background-color: #003F34;
-        }
-
-        .arr-top::before,
-        .arr-top::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: calc(50% - 2px);
-            width: 4px;
-            height: 45px;
-            border-radius: 9999px;
-            background-color: #003F34;
-            transform-origin: 50% 2px;
-        }
-
-        .arr-top::before {
-            transform: rotate(45deg);
-        }
-
-        .arr-top::after {
-            transform: rotate(-45deg);
-        }
-
-        .arr-bot {
-            position: relative;
-            display: inline-block;
-            width: 4px;
-            height: 100px;
-            margin: 0 29px;
-            border-radius: 9999px;
-            background-color: #003F34;
-        }
-
-        .arr-bot::before,
-        .arr-bot::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: calc(50% - 2px);
-            width: 4px;
-            height: 45px;
-            border-radius: 9999px;
-            background-color: #003F34;
-            transform-origin: 50% calc(100% - 2px);
-        }
-
-        .arr-bot::before {
-            transform: rotate(45deg);
-        }
-
-        .arr-bot::after {
-            transform: rotate(-45deg);
         }
 
         .github-arrows {
@@ -214,6 +160,7 @@
         .arrow-bot {
             display: flex;
             flex-direction: column;
+            align-self: center;
         }
 
         .arr-txt {
@@ -226,6 +173,14 @@
             background: #003F34;
             border-radius: 20px;
         }
+        .arr-txt i {
+            color: #fff;
+            padding-inline: 13px;
+            padding-block: 10px;
+            background: #01CD45;
+            border-radius: 100%;
+            margin-right: 10px;
+        }
     </style>
 </head>
 <body>
@@ -233,6 +188,30 @@
         <div class="company">
             Github
         </div>
+        <div class="github github-upstream">
+            <div class="repo">
+                <div class="name">Company Original</div>
+                <div class="username">@company/repo.git</div>
+                <div class="title">Upstream name:</div>
+                <div class="stream-name">upstream</div>
+                <div class="title">Branches:</div>
+                <div class="branch-name">main</div>
+                <div class="branch-name">hotfix</div>
+                <div class="branch-name">features</div>
+            </div>
+        </div>
+
+        <div class="github-arrows">
+            <div class="arrow-top">
+                <div class="arr-top"></div>
+                <div class="arr-txt"><i class="fa-solid fa-arrow-up"></i> Pull Request</div>
+            </div>
+            <div class="arrow-bot">
+                <div class="arr-txt"><i class="fa-solid fa-arrow-down"></i> Fork</div>
+                <div class="arr-bot"></div>
+            </div>
+        </div>
+
         <div class="github">
             <div class="repo">
                 <div class="name">Team Fork</div>
@@ -243,17 +222,6 @@
                 <div class="branch-name">main</div>
                 <div class="branch-name">hotfix/bug321</div>
                 <div class="branch-name">features/urgent/2fa</div>
-            </div>
-
-            <div class="repo">
-                <div class="name">Company Original</div>
-                <div class="username">@company/repo.git</div>
-                <div class="title">Stream name:</div>
-                <div class="stream-name">upstream</div>
-                <div class="title">Branches:</div>
-                <div class="branch-name">main</div>
-                <div class="branch-name">hotfix</div>
-                <div class="branch-name">features</div>
             </div>
 
             <div class="repo">
@@ -272,10 +240,10 @@
     <div class="github-arrows">
         <div class="arrow-top">
             <div class="arr-top"></div>
-            <div class="arr-txt">git push</div>
+            <div class="arr-txt"><i class="fa-solid fa-arrow-up"></i> git push</div>
         </div>
         <div class="arrow-bot">
-            <div class="arr-txt">git pull</div>
+            <div class="arr-txt"><i class="fa-solid fa-arrow-down"></i> git pull</div>
             <div class="arr-bot"></div>
         </div>
     </div>
@@ -295,8 +263,8 @@
                     <div class="stream-name" >origin</div>
                 </div>
                 <div class="title">Remote branches:</div>
-                <div class="branch-name">teamone/main, teamone/hotfix/bug321, teamone/features/urgent/2fa</div>
                 <div class="branch-name">upstream/main, upstream/hotfix, upstream/features</div>
+                <div class="branch-name">teamone/main, teamone/hotfix/bug321, teamone/features/urgent/2fa</div>
                 <div class="branch-name">origin/main, origin/my-new-feature, origin/hotfix/bug123</div>
                 <div class="title">Local branches:</div>
                 <div class="branch-name">main</div>
